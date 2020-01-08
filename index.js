@@ -27,3 +27,9 @@ var barChart = svg.selectAll("rect")
         var translate = [barWidth * i, 0]; 
         return "translate("+ translate +")";
     });
+
+barChart.append('g')
+          .attr('class', 'axis')
+          .attr('transform', 'translate(-50, 200)')
+          .call(yAxis);
+
